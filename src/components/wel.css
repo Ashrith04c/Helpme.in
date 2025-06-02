@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Ligema';
+  src: url('../fonts/Ligema\ DEMO.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Ligema', sans-serif;
+}
+
+.Ligema{
+    font-family: 'Ligema', sans-serif;
+}
+.welcome-container {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at top, #ffffff33 0%, #3F43EC 40%, #FFA600 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+h1, h2 {
+  font-size: 3rem;
+  font-family: 'Ligema',sans-serif;
+}
+
+h2 {
+    margin-bottom: 21px;
+}
+
+.circle-button {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff44;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.get-started {
+  font-size: 1rem;
+  margin: 12px;
+}
