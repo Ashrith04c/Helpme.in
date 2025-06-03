@@ -3,23 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes fadeInSlow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 @font-face {
   font-family: 'Ligema';
-  src: url('../fonts/Ligema\ DEMO.ttf') format('opentype');
+  src: url('../fonts/Ligema-DEMO.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-
 body,
 html {
   height: 100%;
   width: 100%;
-  font-family: 'Ligema', sans-serif;
-}
-
-.Ligema{
-    font-family: 'Ligema', sans-serif;
+ /* font-family: 'Ligema', sans-serif;*/
 }
 .welcome-container {
   height: 100vh;
@@ -31,18 +39,38 @@ html {
   justify-content: center;
   color: white;
   text-align: center;
-  position: relative;
-}
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+}
 h1, h2 {
-  font-size: 3rem;
+  font-size: 6rem;
   font-family: 'Ligema',sans-serif;
 }
-
 h2 {
-    margin-bottom: 21px;
+   margin-top: -60px;
 }
-
+.typing-text {
+ white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  border-right: 1px soild transparent;
+   animation: 
+    typing 2s steps(5, end) 0s 1 normal both,      
+    blink 0.75s step-end infinite,
+    fadeInSlow 2s ease-in forwards;
+}
+.typing-delay {
+ white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: 
+    typing 2s steps(5, end) 3.2s 1 normal both,   /* delay = typing time of first line */
+    blink 0.75s step-end infinite,
+    fadeInSlow 2s ease-in 2.2s forwards;
+}
 .circle-button {
   width: 60px;
   height: 60px;
@@ -56,6 +84,10 @@ h2 {
   cursor: pointer;
   border: none;
   color: white;
+}
+.circle-button i {
+  font-size: 24px;
+transform: translateX(1px);
 }
 
 .get-started {
