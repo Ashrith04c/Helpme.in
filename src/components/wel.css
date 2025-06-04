@@ -27,6 +27,7 @@ body,
 html {
   height: 100%;
   width: 100%;
+   position: relative;
  /* font-family: 'Ligema', sans-serif;*/
 }
 .welcome-container {
@@ -56,7 +57,7 @@ h2 {
  white-space: nowrap;
   overflow: hidden;
   width: 0;
-  border-right: 1px soild transparent;
+   text-align: center;
    animation: 
     typing 2s steps(5, end) 0s 1 normal both,      
     blink 0.75s step-end infinite,
@@ -66,10 +67,11 @@ h2 {
  white-space: nowrap;
   overflow: hidden;
   width: 0;
+   text-align: center;
   animation: 
-    typing 2s steps(5, end) 3.2s 1 normal both,   /* delay = typing time of first line */
+    typing 2s steps(5, end) 1s 1 normal both,  
     blink 0.75s step-end infinite,
-    fadeInSlow 2s ease-in 2.2s forwards;
+    fadeInSlow 2s ease-in 0.1s forwards;
 }
 .circle-button {
   width: 60px;
@@ -86,7 +88,7 @@ h2 {
   color: white;
 }
 .circle-button i {
-  font-size: 24px;
+  font-size: 17px;
 transform: translateX(1px);
 }
 
