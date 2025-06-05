@@ -1,5 +1,5 @@
 import Log from './components/Log';
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 function App() {
   return (
     <>
